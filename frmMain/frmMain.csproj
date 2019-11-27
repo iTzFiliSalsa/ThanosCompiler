@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F33BF88D-DDD9-4F37-8549-FAA55EDC246E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>frmMain</RootNamespace>
+    <AssemblyName>frmMain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ConsoleControl, Version=1.2.1.0, Culture=neutral, PublicKeyToken=7edd23586f5e297f, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConsoleControl.1.2.1\lib\net40-client\ConsoleControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ConsoleControlAPI, Version=1.2.1.0, Culture=neutral, PublicKeyToken=7c86b8a36b9c33e2, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConsoleControlAPI.1.2.1\lib\net40\ConsoleControlAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony, Version=1.1.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Irony.1.1.0\lib\net40\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="Kuto">
+      <HintPath>..\..\..\..\Documents\Kuto.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AleGrammar.cs" />
+    <Compile Include="Chart.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarga.Designer.cs">
+      <DependentUpon>frmCarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Información.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Información.Designer.cs">
+      <DependentUpon>Información.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intermedio\ConvertidorNotacion.cs" />
+    <Compile Include="intermedio\GeneradorCodigoIntermedio.cs" />
+    <Compile Include="intermedio\TablaTriplos.cs" />
+    <Compile Include="intermedio\TablaTriplosFactory.cs" />
+    <Compile Include="intermedio\Triplo.cs" />
+    <Compile Include="Lexico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lexico.Designer.cs">
+      <DependentUpon>Lexico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="semantico\Arbol.cs" />
+    <Compile Include="semantico\ejecucion\ThanosExecutor.cs" />
+    <Compile Include="semantico\ejecucion\ThanosLexer.cs" />
+    <Compile Include="semantico\ejecucion\ThanosListaTokens.cs" />
+    <Compile Include="semantico\ejecucion\ThanosParser.cs" />
+    <Compile Include="semantico\ejecucion\ThanosToken.cs" />
+    <Compile Include="semantico\EjecutarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="semantico\EjecutarForm.Designer.cs">
+      <DependentUpon>EjecutarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="semantico\Gramatica.cs" />
+    <Compile Include="Grammarr.cs" />
+    <Compile Include="Parserr.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexLexer.cs" />
+    <Compile Include="RHS.cs" />
+    <Compile Include="semantico\Semantico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="semantico\Semantico.Designer.cs">
+      <DependentUpon>Semantico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="semantico\Simbolo.cs" />
+    <Compile Include="Sintactico.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="semantico\TablaSimbolos.cs" />
+    <Compile Include="Tok.cs" />
+    <Compile Include="Token.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarga.resx">
+      <DependentUpon>frmCarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Información.resx">
+      <DependentUpon>Información.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lexico.resx">
+      <DependentUpon>Lexico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="semantico\EjecutarForm.resx">
+      <DependentUpon>EjecutarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="semantico\Semantico.resx">
+      <DependentUpon>Semantico.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="alma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="espacio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="poder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="realidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tiempo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ap,550x550,12x12,1,transparent,t.u2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brillante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="restiempo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tiempores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINEA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copybrillante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pegar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pbrillante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dedos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Console.ico" />
+    <None Include="Resources\abrir.png" />
+    <None Include="Resources\informacion.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

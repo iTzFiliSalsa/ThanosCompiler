@@ -1,0 +1,12 @@
+C:\Users\filis\source\repos\frmMain\frmMain\bin\Release\frmMain.exe.config
+C:\Users\filis\source\repos\frmMain\frmMain\bin\Release\frmMain.exe
+C:\Users\filis\source\repos\frmMain\frmMain\bin\Release\frmMain.pdb
+C:\Users\filis\source\repos\frmMain\frmMain\bin\Release\Bunifu_UI_v1.5.3.dll
+C:\Users\filis\source\repos\frmMain\frmMain\obj\Release\frmMain.csprojAssemblyReference.cache
+C:\Users\filis\source\repos\frmMain\frmMain\obj\Release\frmMain.Form1.resources
+C:\Users\filis\source\repos\frmMain\frmMain\obj\Release\frmMain.Properties.Resources.resources
+C:\Users\filis\source\repos\frmMain\frmMain\obj\Release\frmMain.csproj.GenerateResource.cache
+C:\Users\filis\source\repos\frmMain\frmMain\obj\Release\frmMain.csproj.CoreCompileInputs.cache
+C:\Users\filis\source\repos\frmMain\frmMain\obj\Release\frmMain.csproj.CopyComplete
+C:\Users\filis\source\repos\frmMain\frmMain\obj\Release\frmMain.exe
+C:\Users\filis\source\repos\frmMain\frmMain\obj\Release\frmMain.pdb
